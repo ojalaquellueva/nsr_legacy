@@ -31,7 +31,8 @@ ADD INDEX (genus),
 ADD INDEX (species),
 ADD INDEX (country),
 ADD INDEX (state_province),
-ADD INDEX (county_parish)
+ADD INDEX (county_parish),
+ADD INDEX (is_in_cache)
 ;
 
 UPDATE observation 

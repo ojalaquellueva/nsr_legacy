@@ -19,7 +19,8 @@ o.native_status=c.native_status,
 o.native_status_reason=c.native_status_reason,
 o.native_status_sources=c.native_status_sources,
 o.isIntroduced=c.isIntroduced,
-o.isCultivatedNSR=c.isCultivatedNSR
+o.isCultivatedNSR=c.isCultivatedNSR,
+o.is_cultivated_taxon=c.is_cultivated_taxon
 WHERE
 o.state_province IS NULL AND c.state_province IS NULL
 AND o.county_parish IS NULL AND c.county_parish IS NULL
@@ -40,7 +41,8 @@ o.native_status=c.native_status,
 o.native_status_reason=c.native_status_reason,
 o.native_status_sources=c.native_status_sources,
 o.isIntroduced=c.isIntroduced,
-o.isCultivatedNSR=c.isCultivatedNSR
+o.isCultivatedNSR=c.isCultivatedNSR,
+o.is_cultivated_taxon=c.is_cultivated_taxon
 WHERE
 o.county_parish IS NULL AND c.county_parish IS NULL
 ;
@@ -61,7 +63,8 @@ o.native_status=c.native_status,
 o.native_status_reason=c.native_status_reason,
 o.native_status_sources=c.native_status_sources,
 o.isIntroduced=c.isIntroduced,
-o.isCultivatedNSR=c.isCultivatedNSR
+o.isCultivatedNSR=c.isCultivatedNSR,
+o.is_cultivated_taxon=c.is_cultivated_taxon
 ;
 ";
 sql_execute_multiple($sql);

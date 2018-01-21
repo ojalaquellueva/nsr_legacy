@@ -10,6 +10,4 @@ if (!$dbh) die("\r\nCould not connect to database!\r\n");
 $sql="USE `".$DB."`;";
 sql_execute_multiple($sql);
 
-
-
 ?>

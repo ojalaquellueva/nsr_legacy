@@ -32,7 +32,7 @@ Returns: tab-delimited file, "nsr_results.txt", in /var/www/bien/apps/nsr/data/
 
 // Get db connection parameters (in ALL CAPS)
 include 'params.php';
-include $CONFIG_DIR.'db_config.php';
+include $CONFIG_DIR.'db_configw.php';
 include $batch_includes_dir.'batch_params.php';
 
 //////////////////////////////////////////////////////
@@ -211,9 +211,9 @@ if(file_exists($inputfile)) {
 	$num_rows = sql_get_first_result($sql,'rows');
 
 	if ($num_rows>0) {
-		if ($echo_on) echo "Resolving $num_rows new observations...";
+		if ($echo_on) echo "Resolving $num_rows new observations:\r\n";
 		include_once "nsr.php";	
-		if ($echo_on) echo "$done";
+		//if ($echo_on) echo "$done";
 	}
 		
 	if ($replace_cache===false) {

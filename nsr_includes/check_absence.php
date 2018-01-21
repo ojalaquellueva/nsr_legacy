@@ -33,6 +33,7 @@
 // separate script.
 ////////////////////////////////////////////////////////////////
 
+if ($echo_on) echo "  Checking absence...";
 
 ///////////////////////////////////////////////////
 // Mark all political divisions in observation
@@ -57,8 +58,8 @@ ON o.country=d.country
 AND o.state_province=d.state_province
 SET 
 o.native_status_state_province='A'
-WHERE 
-d.county_parish IS NULL
+WHERE o.state_province IS NOT NULL AND d.state_province IS NOT NULL
+AND d.county_parish IS NULL
 AND $CACHE_WHERE
 ;
 ";
@@ -71,9 +72,13 @@ AND o.state_province=d.state_province
 AND o.county_parish=d.county_parish
 SET 
 o.native_status_county_parish='A'
-WHERE $CACHE_WHERE
+WHERE o.state_province IS NOT NULL AND d.state_province IS NOT NULL
+AND o.county_parish IS NOT NULL AND d.county_parish IS NOT NULL
+AND $CACHE_WHERE
 ;
 ";
 sql_execute_multiple($sql);	
+
+if ($echo_on) echo "done\r\n";
 
 ?>
