@@ -4,10 +4,10 @@
 
 - [Overview](#Overview)
 - [Usage](#Usage)
-- [Schema](#Schema)
+- [Output schema](#Schema)
 - [Native Status Codes](#Native)
 
-## Overview
+## <a name="Overview"></a>Overview
 
 Determines if a taxon is native or introduced within the political division of observation. Accepts one or more observations of taxon in political division, formatted as follow (optional values in brackets):  
 
@@ -35,7 +35,7 @@ The NSR consists uses php and mysql, and consists of three applications run by t
 - NSR web service
 - Processes one observation at a time via URL request
 
-## Usage
+## <a name="Usage"></a>Usage
 
 General:
 
@@ -65,20 +65,20 @@ Notes:
 * Results file has same base name as input file, plus suffix "_nsr_results.txt" 
 * Results file is tab-delimitted, regardless of the format of the input file
 
-## Results file schema:
+## <a name="Schema">Output schema
 
 | Column	| Meaning (values)
 | --------- | -------------------
 | native_status_country	| Native status in country (see native status values, below)
 | native_status_state_province	| Native status in state_province, if any (see native status values, below)
-| native_status_county_parishvNative status in county_parish, if any (see native status values, below)
+| native_status_county_parish	| Native status in county_parish, if any (see native status values, below)
 | native_status	| Overall native status in lowest declared political division (see native status values, below)
 | native_status_reason	| Reason native status was assigned
 | native_status_sources	| Checklists used to determine native status
 | isIntroduced	| Simplified overall native status (1=introduced;  0=native; blank=status unknown)
 | isCultivatedNSR	| Species is known to be cultivated in declared region  (1=cultivated;  0=wild or status unknown)
 
-## Native Status Codes
+## <a name="Native">Native Status Codes
 
 | Native status code	| Meaning 
 | --------- | -------------------
