@@ -1,4 +1,4 @@
-BIEN Native Status Resolution Service (NSR)
+BIEN Native Status Resolver (NSR)
 
 For an observation of a taxon within a political division:
 
