@@ -12,6 +12,7 @@ if ($echo_on) echo "Saving results to $resultsfile:\r\n";
 
 if ($echo_on) echo "  Creating duplicate table for export...";
 $sql="
+DROP TABLE IF EXISTS observation_temp;
 CREATE TABLE observation_temp LIKE observation;
 INSERT INTO observation_temp SELECT * FROM observation;
 ALTER TABLE observation_temp
