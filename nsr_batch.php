@@ -110,7 +110,7 @@ if (array_key_exists('l', $options)) {
 
 // parameters $inputfilename and $resultsfilename in 
 // batch_params.php, but can
-$inputfile = $BASE_URL.$DATADIR.$inputfilename;
+$inputfile = $DATADIR.$inputfilename;
 
 // Set name of result file based on input file
 $pizza = explode('.',$inputfilename);
@@ -121,7 +121,7 @@ if (count($pizza)>1) {
 	$ext = '';
 }
 $resultsfilename = str_replace($ext,'',$inputfilename) . "_nsr_results.txt";
-$resultsfile = $BASE_URL.$DATADIR.$resultsfilename;
+$resultsfile = $DATADIR.$resultsfilename;
 
 // Replace cache?
 // Default=false
