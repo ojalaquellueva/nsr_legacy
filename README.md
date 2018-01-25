@@ -4,8 +4,8 @@
 
 - [Overview](#Overview)
 - [Usage](#Usage)
-- [Output schema](#Output schema)
-- [Native Status Codes](#Native Status Codes)
+- [Schema](#Schema)
+- [Native Status Codes](#Native)
 
 ## Overview
 
@@ -89,6 +89,3 @@ Notes:
 | I	| Introduced, as declared in checklist for region of observation
 | Ie | Endemic to other region and therefore introduced in region of observation
 | UNK | Unknown; no checklists available for region of observation and taxon not endemic elsewhere
-
-
-
