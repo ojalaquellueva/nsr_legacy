@@ -1,4 +1,5 @@
-# BIEN Native Status Resolver (NSR)
+# Legacy repository for the original BIEN Native Status Resolver (NSR)
+# SEE updated respository ojalaquellueva/nsr
 
 ## Table of Contents
 
